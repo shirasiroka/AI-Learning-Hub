@@ -42,6 +42,16 @@ The application follows a classic client-server architecture:
 - **Server (Backend):** Manages API routing, business logic, and security middleware.
 - **Database (MongoDB):** Stores user profiles, AI prompts, and category structures.
 
+## Admin Access (For Evaluation)
+To access the administrative features and the Admin Dashboard, please use the following credentials on the Home Page:
+
+Access Code: 1234
+
+Step 1: Click on "Log in as Admin" on the landing page.
+
+Step 2: Enter the code 1234 when prompted.
+
+Step 3: You will be redirected to the Admin Dashboard to manage categories and users.
 
 
 ---

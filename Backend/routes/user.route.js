@@ -10,7 +10,7 @@ router.get('/:id', getuser);
 router.put('/:id', updateuser);
 router.post('/', adduser);
 router.delete('/:id', deleteuser);
-// route to get user history (prompts created by the user)
+// Route to get user history (prompts created by the user)
 router.get('/:id/history', getUserHistory); 
 
 export default router;
