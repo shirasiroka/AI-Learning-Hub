@@ -60,5 +60,5 @@ Step 3: You will be redirected to the Admin Dashboard to manage categories and u
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repository-url>
-   cd <project-folder-name>
+   git clone <https://github.com/shirasiroka/AI-Learning-Hub>
+   cd <AI-Learning-Hub>
