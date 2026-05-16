@@ -1,32 +1,35 @@
+// export default server
 import express from 'express';
+//import bodyParser from 'body-parser';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import promptsRoute from './routes/prompts.route.js';
 import userRoute from './routes/user.route.js';
 import categoryRoute from './routes/category.route.js';
 import jwt from 'jsonwebtoken'; 
-
-// Initialize the Express application
 const app = express();
 
-// --- Middleware Configuration ---
-
-// Enable Cross-Origin Resource Sharing (CORS) to allow requests from the frontend
 app.use(cors());
-
-// Parse incoming request bodies in JSON format
 app.use(bodyParser.json());
 
-// --- API Route Definitions ---
-
-// Routes related to AI prompts and learning history
 app.use('/prompts', promptsRoute);
-
-// Routes for user management (Registration and retrieval)
 app.use('/users', userRoute);
-
-// Routes for category and sub-category management
 app.use('/categories', categoryRoute);
 
-// Export the app instance for use in server.js/index.js
+
+
+app.get('/get-admin-token', (req, res) => {
+  try {
+    // The manager that needs to test admin routes can use this token.
+    const token = jwt.sign(
+      { id: '6a04a5338b63963a4b680dae', role: 'admin' }, 
+      process.env.JWT_SECRET , 
+      { expiresIn: '365d' }
+    );
+    res.send(token);
+  } catch (error) {
+    res.status(500).send("Error generating token: " + error.message);
+  }
+});
+
 export default app;
