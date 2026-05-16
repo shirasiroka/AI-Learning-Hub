@@ -52,8 +52,6 @@ The application follows a classic client-server architecture:
 ## Admin Access (For Evaluation)
 To access the administrative features and the Admin Dashboard, please use the following credentials on the Home Page:
 * **Access Code:** 1234
-
-<<<<<<< HEAD
 1. **Step 1:** Click on "Log in as Admin" on the landing page.
 2. **Step 2:** Enter the code `1234` when prompted.
 3. **Step 3:** You will be redirected to the Admin Dashboard to manage categories and users.
@@ -105,4 +103,4 @@ docker-compose down
    ```bash
    git clone <https://github.com/shirasiroka/AI-Learning-Hub>
    cd <AI-Learning-Hub>
->>>>>>> cf01ca7aa2dc8dde004a6acc0b145f5cc9f0c5aa
+
